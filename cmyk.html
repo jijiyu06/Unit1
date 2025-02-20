@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additive and Subtractive Color Models</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Shizuru&family=Tilt+Neon&display=swap');
+
+        body {
+            background-color: white;
+            font-family: 'Tilt Neon', sans-serif;
+            text-align: center;
+            padding: 40px;
+            margin: 0;
+        }
+
+        h1 {
+            font-family: 'Shizuru', sans-serif;
+            font-size: 36px;
+            color: #333;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .box {
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 30px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: "Tilt Neon", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 30px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: "Tilt Neon", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+            font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Additive and Subtractive Color Models</h1>
+
+    <div class="container">
+        <div class="box">
+            <h2>The Additive Color Model (RGB)</h2>
+            <p>RGB stands for red, green, and blue, and is based on the additive color model of light waves that dictates that the more color you add, the closer the color gets to white. The RGB color model forms the basis of all electronic screens, and as a result, is the model used most often by UI designers.</p>
+            <p><strong>The RGB Color Model</strong></p>
+            <img src="Images/rgb.jpg" alt="RGB Color Model" style="max-width: 100%; border-radius: 10px;">
+        </div>
+
+
+        <div class="box">
+            <h2>The Subtractive Color Model (CMYK)</h2>
+            <p>On the other hand, CMYK is known as the subtractive color model, which obtains colors by the subtraction of light. CMYK stands for cyan, magenta, yellow, and black, and it is mostly used in physical printing.</p>
+            <p><strong>The CMYK Color Model</strong></p>
+            <img src="Images/cmyk.jpg" alt="CMYK Color Model" style="max-width: 100%; border-radius: 10px;">
+        </div>
+    </div>
+
+    <a href="intro.html" class="back">Back</a>
+    <a href="Colorpalette.html" class="btn">Next</a>
+
+</body>
+</html>

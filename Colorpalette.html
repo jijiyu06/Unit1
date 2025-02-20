@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Variants</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Shizuru&family=Tilt+Neon&display=swap');
+
+       body {
+    background: linear-gradient(to bottom, #ff9a9e, #fad0c4, #fbc2eb, #a18cd1, #fbc2eb);
+    animation: scrollBackground 10s linear infinite;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    transition: background 0.3s ease-in-out;
+}
+
+
+    
+        h1 {
+            font-size: 50px;
+            color: #333;
+            margin-bottom: 10px;
+            font-family: "Shizuru", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        p {
+            font-size: 18px;
+            max-width: 800px;
+            color: #000000;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: "Tilt Neon", serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .Hue {
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .back, .btn {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 24px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: "Tilt Neon", serif;
+            font-weight: 600;
+        }
+
+        h2 {
+            color: rgb(0, 0, 0);
+            font-family: "Tilt Neon", sans-serif;
+        }
+
+        .btn:hover {
+            background-color: hotpink;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 35px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .btn {
+                font-size: 20px;
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 28px;
+            }
+
+            p {
+                font-size: 14px;
+                max-width: 100%;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .btn {
+                font-size: 18px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Color Palettes</h1>
+
+    <p>A color palette is a combination of colors used by UI designers when designing an interface. When used correctly, color palettes form the visual foundation of your brand, help maintain consistency, and make your user interface aesthetically pleasing and enjoyable to use.</p>
+
+    <p>While color palettes date back thousands of years, they are commonly used in digital design and presented as a combination of HEX codes. HEX codes communicate to a computer what color to display using hexadecimal values. In the '90s, most digital color palettes only included eight colors. Now, designers have a myriad of shades and hues from the color wheel to choose from.</p>
+
+    <div class="Hue">
+        <h2>Monochromatic</h2>
+        <p>A popular choice with designers, monochromatic color schemes are formed using various tones and shades of a single color.</p>
+        <img src="Images/monochrome.jpg" alt="Monochromatic Color Palette" style="max-width: 100%; border-radius: 10px;">
+    </div>
+
+    <div class="Hue">
+        <h2>Analogous</h2>
+        <p>An analogous color scheme consists of three colors that are located next to each other on the color wheel. These palettes are commonly used for subtle transitions in web page backgrounds or banners.</p>
+        <img src="Images/analogous.jpg" alt="Analogous Color Palette" style="max-width: 100%; border-radius: 10px;">
+    </div>
+
+    <div class="Hue">
+        <h2>Complementary</h2>
+        <p>Complementary color palettes include colors positioned opposite each other on the color wheel. They create strong visual contrast, making elements stand out, like a red button on a blue background.</p>
+        <img src="Images/complementary.jpg" alt="Complementary Color Palette" style="max-width: 100%; border-radius: 10px;">
+    </div>
+
+    <div class="Hue">
+        <h2>Split-complementary</h2>
+        <p>The split-complementary color palette is a variation of the complementary scheme. Instead of just one opposite color, it uses the two adjacent to it. For example, if you choose blue, you would use yellow and red as its complements.</p>
+        <img src="Images/split.jpg" alt="Split-Complementary Color Palette" style="max-width: 100%; border-radius: 10px;">
+    </div>
+
+    <div class="Hue">
+        <h2>Triadic</h2>
+        <p>The triadic color scheme consists of three colors that are evenly spaced on the color wheel. Designers typically choose one dominant color while using the other two as accents.</p>
+        <img src="Images/triad.jpg" alt="Triadic Color Palette" style="max-width: 100%; border-radius: 10px;">
+    </div>
+
+    <div class="Hue">
+        <h2>Tetradic</h2>
+        <p>The tetradic color scheme, often used by experienced designers, employs two pairs of complementary colors, forming a rectangle on the color wheel. While harder to balance, it creates a vibrant and dynamic visual effect.</p>
+
+    </div>
+
+    <a href="cmyk.html" class="back">Back</a>
+    <a href="how.html" class="btn">Next</a>
+
+</body>
+</html>

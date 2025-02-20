@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Variants</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Shizuru&family=Tilt+Neon&display=swap');
+
+        body {
+            background-color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            overflow-y: auto;
+            box-sizing: border-box;
+        }
+    
+        h1 {
+            font-size: 50px;
+            color: #333;
+            margin-bottom: 10px;
+            font-family: "Shizuru", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+        h2 {
+            font-size: 30px;
+            max-width: 800px;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: "Tilt Neon", serif;
+            font-weight: 600;
+        }
+        
+        
+        p {
+            font-size: 18px;
+            max-width: 800px;
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: "Tilt Neon", serif;
+            font-weight: 600;
+        }
+
+        .box {
+            width: 100%;
+            max-width: 900px;
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: background 0.5s ease;
+        }
+
+        .Hue { background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); }
+        .Hue:hover { background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red); }
+
+        .Shade { background: linear-gradient(to right, black, red); }
+        .Shade:hover { background: linear-gradient(to right, red, black); }
+
+        .Tint { background: linear-gradient(to right, white, red); }
+        .Tint:hover { background: linear-gradient(to right, red, white); }
+
+        .Tone { background: linear-gradient(to right, gray, red); }
+        .Tone:hover { background: linear-gradient(to right, red, gray); }
+
+        .Temp { background: linear-gradient(to right, blue, red); }
+        .Temp:hover { background: linear-gradient(to right, red, blue); }
+
+        .container h2 {
+            font-size: 26px;
+            color: #ffffff; 
+            margin-top: 20px;
+            font-family: "Tilt Neon", sans-serif;
+        }
+
+        .back, .btn {
+            display: inline-block;
+            margin-top: 20px;
+            font-size: 30px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: "Tilt Neon", serif;
+            font-weight: 600;
+        }
+       
+        .btn:hover { background-color: hotpink; }
+    </style>
+</head>
+<body>
+
+    <h1>Understanding Color Variants</h1>
+    
+    <div class="box Hue">
+        <h2>Hue</h2>
+        <p>Hue refers to the pure pigment of a color, without tint or shade.</p>
+    </div>
+
+    <div class="box Shade">
+        <h2>Shade</h2>
+        <p>Shade refers to how much black is added into the hue, darkening the color.</p>
+    </div>
+
+    <div class="box Tint">
+        <h2>Tint</h2>
+        <p>Tint refers to how much white is added to a color, lightening it.</p>
+    </div>
+
+    <div class="box Tone">
+        <h2>Tone</h2>
+        <p>Tone is the result of adding both black and white (gray) to a hue.</p>
+    </div>
+
+    <div class="box Temp">
+        <h2>Color Temperature</h2>
+        <p>Warm colors contain yellow and red; cool colors have blue or green tones.</p>
+    </div>
+
+    <a href="Color wheel.html" class="back">Back</a>
+    <a href="cmyk.html" class="btn">Next</a>
+
+</body>
+</html>

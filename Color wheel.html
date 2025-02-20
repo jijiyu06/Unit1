@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Wheels</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Shizuru&family=Tilt+Neon&display=swap');
+
+        body {
+            background-color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: #040404;
+            margin-bottom: 20px;
+            font-family: "Shizuru", serif;
+            font-weight: 400;
+            font-style: normal;
+
+        }
+
+        p {
+            font-size: 18px;
+            max-width: 900px;
+            color: #555;
+            text-align: center;
+            margin-bottom: 10px;
+            font-family: "Tilt Neon", serif;
+            font-optical-sizing: 300px;
+            font-weight: 600;
+            font-style: normal;
+            font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin: 30px 0;
+        }
+
+        .wheel {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .wheel:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        .wheel div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+
+        .primary div:nth-child(1) { background-color: red; transform: rotate(0deg); clip-path: polygon(50% 50%, 100% -40%, 100% 200%); }
+        .primary div:nth-child(2) { background-color: yellow; transform: rotate(120deg); clip-path: polygon(50% 50%, 100% -40%, 100% 200%); }
+        .primary div:nth-child(3) { background-color: blue; transform: rotate(240deg); clip-path: polygon(50% 50%, 100% -40%, 100% 200%); }
+
+  
+        .secondary div:nth-child(1) { background-color: #fb9902; transform: rotate(0deg); clip-path: polygon(50% 50%, 100% 60%, 100% 200%); } 
+        .secondary div:nth-child(2) { background-color: #fe2712; transform: rotate(60deg); clip-path: polygon(50% 50%, 100% 60%, 100% 200%);}
+        .secondary div:nth-child(3) { background-color: #8601af; transform: rotate(120deg); clip-path: polygon(50% 50%, 100% 60%, 100% 200%);}
+        .secondary div:nth-child(4) { background-color: #0247FE; transform: rotate(180deg); clip-path: polygon(50% 50%, 100% 60%, 100% 200%);}
+        .secondary div:nth-child(5) { background-color: #66b032; transform: rotate(240deg); clip-path: polygon(50% 50%, 100% 60%, 100% 200%);}
+        .secondary div:nth-child(6) { background-color: #fefe33; transform: rotate(300deg); clip-path: polygon(50% 50%, 100% 60%, 100% 200%); }
+
+   
+        .tertiary div:nth-child(1) { background-color: #fe2712; transform: rotate(0deg); clip-path: polygon(50% 50%, 100% 80%, 120% 200%);}
+        .tertiary div:nth-child(2) { background-color: #fc600A; transform: rotate(30deg); clip-path: polygon(50% 50%, 100% 80%, 120% 200%);}
+        .tertiary div:nth-child(3) { background-color: #fb9902; transform: rotate(60deg); clip-path: polygon(50% 50%, 100% 80%, 120% 200%);}
+        .tertiary div:nth-child(4) { background-color: #fccc1a; transform: rotate(90deg); clip-path: polygon(50% 50%, 100% 80%, 120% 200%);}
+        .tertiary div:nth-child(5) { background-color: #fefe33; transform: rotate(120deg); clip-path: polygon(50% 50%, 100% 80%, 120% 200%);}
+        .tertiary div:nth-child(6) { background-color: #b2d732; transform: rotate(150deg); clip-path: polygon(50% 50%, 100% 80%, 120% 200%);}
+        .tertiary div:nth-child(7) { background-color: #66b032; transform: rotate(180deg); clip-path: polygon(50% 50%, 100% 80%, 120% 200%);}
+        .tertiary div:nth-child(8) { background-color: #347c98; transform: rotate(210deg); clip-path: polygon(50% 50%, 100% 80%, 120% 200%);}
+        .tertiary div:nth-child(9) { background-color: #0247FE; transform: rotate(240deg); clip-path: polygon(50% 50%, 100% 80%, 120% 200%);}
+        .tertiary div:nth-child(10) { background-color: #4424d6; transform: rotate(270deg); clip-path: polygon(50% 50%, 100% 80%, 120% 200%);}
+        .tertiary div:nth-child(11) { background-color: #8601af; transform: rotate(300deg); clip-path: polygon(50% 50%, 100% 80%, 120% 200%);}
+        .tertiary div:nth-child(12) { background-color: #c21460; transform: rotate(330deg); clip-path: polygon(50% 50%, 100% 80%, 120% 200%);}
+
+        .back {
+            display: inline-block;
+            margin-top: 30px;
+            font-size: 25px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: "Tilt Neon", serif;
+            font-optical-sizing: 300px;
+            font-weight: 600;
+            font-style: normal;
+            font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 30px;
+            font-size: 25px;
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-family: "Tilt Neon", serif;
+            font-optical-sizing: 300px;
+            font-weight: 600;
+            font-style: normal;
+            font-variation-settings:
+    "XROT" 0,
+    "YROT" 0;
+        }
+
+        .btn:hover {
+            background-color: hotpink;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Primary, Secondary, and Tertiary Colors</h1>
+
+    <div class="container">
+     
+        <div class="wheel primary">
+            <div onclick="showColor('Red', '#FF0000')"></div>
+            <div onclick="showColor('Yellow', '#FFFF00')"></div>
+            <div onclick="showColor('Blue', '#0000FF')"></div>
+        </div>
+
+        
+        <div class="wheel secondary">
+            <div onclick="showColor('Orange', '#FFA500')"></div>
+            <div onclick="showColor('Red', '#FF0000')"></div>
+            <div onclick="showColor('Violet', '#8B00FF')"></div>
+            <div onclick="showColor('Blue', '#0000FF')"></div>
+            <div onclick="showColor('Green', '#008000')"></div>
+            <div onclick="showColor('Yellow', '#FFFF00')"></div>
+        </div>
+
+       
+        <div class="wheel tertiary">
+            <div onclick="showColor('Red', '#fe2712')"></div>
+            <div onclick="showColor('Red-Orange', '#FFA500')"></div>
+            <div onclick="showColor('Orange', '#fb9902')"></div>
+            <div onclick="showColor('Yellow-Orange', '#fccc1a')"></div>
+            <div onclick="showColor('Yellow', '#fefe33')"></div>
+            <div onclick="showColor('Yellow-Green', '#b2d732')"></div>
+            <div onclick="showColor('Green', '#66b032')"></div>
+            <div onclick="showColor('Blue-Green', '#347c98')"></div>
+            <div onclick="showColor('Blue', '#0247FE')"></div>
+            <div onclick="showColor('Purple-Blue', '#4424d6')"></div>
+            <div onclick="showColor('Purple', '#8601af')"></div>
+            <div onclick="showColor('Red-Purple', '#c21460')"></div>
+        </div>
+    </div>
+
+    <p id="colorCode">Click a color to see its HEX code.</p>
+
+     <script>
+        function showColor(name, hex) {
+            let colorCodeElement = document.getElementById("colorCode");
+            colorCodeElement.innerHTML = name + " - " + hex;
+            document.body.style.backgroundColor = hex;
+        }
+    </script>
+
+
+
+<a href="Color theory.html" class="back">Back</a>
+<a href="intro.html" class="btn">Next</a>
+
+</body>
+</html>
